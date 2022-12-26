@@ -43,12 +43,14 @@ a:hover , a:visited{
     padding: 0;
 }
 #menu ul li {
-    line-height: 2.9em;
-    height: 2.9em;
-    transition: all 1s;
-    -moz-transition: all 1s;
-    -webkit-transition: all 1s;
+    line-height: 3em;
+    height: 3em;
+    transition: all 2s;
+    -moz-transition: all 2s;
+    -webkit-transition: all 2s;
     position: relative;
+    -ms-transition: all 2s;
+    -o-transition: all 2s;
 }
 #menu ul li a {
     display: block;
@@ -66,7 +68,7 @@ a:hover , a:visited{
     left:  100%;
     width: 250px;
     background-color: #99ffff;
-    padding: 5px 10px;
+    padding: 10px 10px;
 }
 
 #menu ul li:hover .sub-menu {
@@ -83,8 +85,12 @@ a:hover , a:visited{
 #header .call-to-action {
     text-align: center;
 }
-#header {}
-#header #logo {}
+#header {
+
+}
+#header #logo {
+    
+}
 #header #slogan {
     color: #d11d6e;
     font-size: 0.8em;
