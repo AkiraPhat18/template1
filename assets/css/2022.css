@@ -1,4 +1,4 @@
-html,
+/* html,
 body {
   width: 100%;
   height: 100%;
@@ -63,4 +63,67 @@ body {
 }
 .slide-3 {
   background-image: url("https://source.unsplash.com/OlZ1nWLEEgM/1600x900");
+} */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+body{
+  height: 100vh;
+  background: #dadada;
+}
+
+.cotainer {
+  width: 80%;
+  height: 80%;
+  margin: 50px auto;
+}
+
+.main {
+  height: 80%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.list-image {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-image div {
+  flex: 1;
+  padding: 5x;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.control-next , .control-prev {
+  position: absolute;
+  top: 50%;
+  font-size: 70px;
+  color: aliceblue;
+  transform: translateY(-50%);
+}
+
+.control-prev {
+  left: 10px;
+}
+
+.control-next {
+  right: 10px;
+}
+
+.active {
+  background: red;
 }
