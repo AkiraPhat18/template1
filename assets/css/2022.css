@@ -1,86 +1,118 @@
-* {
-  box-sizing: border-box;
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #23E3C9;
 }
 
-/* Position the image container (needed to position the left and right arrows) */
-.container {
-  position: relative;
+.slider {
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-/* Hide the images by default */
-.mySlides {
+.slide {
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input {
   display: none;
 }
 
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
+.slide {
+  width: 20%;
+  transition: 2s;
+  /* -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s; */
+}
+
+.slide img {
+  width: 800px;
+  height: 500px;
+}
+
+/*css for manual slide navigation */
+.navigation-manual {
+   position: absolute;
+   width: 800px;
+   margin-top: -40px;
+   display: flex;
+   justify-content: center;
+}
+
+.manual-btn {
+  border:  2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
   cursor: pointer;
+  transition: 1s;
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
+.manual-btn:not(last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background: #40D3DC;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto{
   position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.navigation-auto div{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: #40D3DC;
 }
 
-/* Container for image text */
-.caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: #40D3DC;
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: #40D3DC;
 }
 
-/* Six columns side by side */
-.column {
-  float: left;
-  width: 16.66%;
-}
-
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: #40D3DC;
 }
